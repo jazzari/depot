@@ -31,6 +31,21 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
+
+  # Don't actually send emails
+  config.action_mailer.delivery_method = :test
+  #
+  # Alternate configuration example, using gmail:
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #     address:        "smtp.gmail.com",
+  #     port:           587, 
+  #     domain:         "domain.of.sender.net",
+  #     authentication: "plain",
+  #     user_name:      "dave",
+  #     password:       "secret",
+  #     enable_starttls_auto: true
+  #   } 
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
@@ -57,5 +72,6 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker    
+  
 end
