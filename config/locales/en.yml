@@ -59,6 +59,8 @@ en:
         delimeter: ","
         format: "%u%n"
 
+        en:
+
   orders:
     new:
       legend: "Please Enter Your Details"
@@ -70,8 +72,8 @@ en:
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
 
-    en:  
+      en:  
 
-      thanks: "Thank you for Your Order"
+  thanks: "Thank you for Your Order"
 
 
